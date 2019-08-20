@@ -3,8 +3,12 @@
 import sys
 import argparse
 from lxml import etree
-import .knowntags
 from copy import deepcopy
+
+if __name__ == '__main__':
+    import knowntags
+else:
+    from . import knowntags
 
 class TeXSyntax:
     def __init__(self):
